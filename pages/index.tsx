@@ -3,6 +3,8 @@ import useSWR from "swr";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { Button, Text } from "@chakra-ui/react";
+import { createBrotliCompress } from "zlib";
 
 type Data = {
   name: string;
@@ -25,6 +27,8 @@ const Home: NextPage = () => {
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
         {data && <h1>{data.name}</h1>}
+        <Button colorScheme="blue">Button</Button>
+        <Text fontSize="xs" color="brand.900">あああああ</Text>
 
         <p className={styles.description}>
           Get started by editing{" "}
